@@ -6,7 +6,7 @@
 #    By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/17 18:46:11 by albaud            #+#    #+#              #
-#    Updated: 2022/07/17 23:32:54 by albaud           ###   ########.fr        #
+#    Updated: 2022/10/28 14:01:22 by albaud           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,20 @@ CFLAGS	= -Wall -Wextra -Werror
 .c.o 	:
 		${CC} ${CFLAGS} -I /usr/X11/include -c $< -o ${<:.c=.o}
 		
-all : $(NAME)
+all 	: $(NAME)
 
 $(NAME)	: ${OBJS}
-		echo ${OBJS}
 		ar rcs ${NAME} ${OBJS}
+
+clean	:
+		rm -f ${OBJS}
+
+fclean	:	clean
+		rm -f ${NAME}
+
+re		: fclean all
+
+push	:
+		git add *
+		git commit -m save
+		git push
