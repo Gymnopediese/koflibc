@@ -6,12 +6,11 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:23:05 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 19:35:06 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 22:51:15 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../sources.h"
-
 
 void	ft_garbage_colector(void *ptr, int mode, int _exit)
 {
@@ -21,6 +20,8 @@ void	ft_garbage_colector(void *ptr, int mode, int _exit)
 	if (mode == 0)
 	{
 		elem = ft_lstnew(ptr);
+		if (elem == 0 && _exit)
+			ft_lstclear(&garbage, free);
 		if (elem == 0)
 			return ;
 		ft_lstadd_back(&garbage, elem);

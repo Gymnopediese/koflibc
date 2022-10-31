@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 22:58:18 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 11:37:20 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 23:16:15 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_free_pp(void **to_free)
 	while (to_free[++i])
 	{
 		free(to_free[i]);
+		to_free[i] = 0;
 	}
 	free(to_free);
 }

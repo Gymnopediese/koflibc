@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:27:39 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 19:45:07 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 23:03:44 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int		ft_f(void *p);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_garbage_colector(void *ptr, int mode, int _exit);
 void	*allok(int num, int size, int exit_on_null);
+int		ft_garbage_pp(void **ptr, int len);
 #endif

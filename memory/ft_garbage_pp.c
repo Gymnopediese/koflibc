@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoia.c                                         :+:      :+:    :+:   */
+/*   ft_garbage_pp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 14:50:32 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 22:50:21 by albaud           ###   ########.fr       */
+/*   Created: 2022/10/31 19:23:05 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/31 22:54:48 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../sources.h"
 
-int	*ft_atoia(char *str, char split, double *size)
+int	ft_garbage_pp(void **ptr, int len)
 {
-	char	**buffer;
-	int		*res;
-	int		k;
+	int	i;
 
-	buffer = ft_split(str, split);
-	res = ft_calloc(ft_strtablen(buffer), sizeof(int));
-	if (res == 0)
-	{
-		ft_free_pp((void *)buffer);
-		return (0);
-	}
-	k = -1;
-	while (buffer[++k])
-		res[k] = ft_atoli(buffer[k]);
-	*size = k;
-	ft_free_pp((void *)buffer);
-	return (res);
+	i = -1;
+	while (++i < len || (len == -1 && ptr[i]))
+		ft_garbage_colector(ptr[i], 0, 1);
+	ft_garbage_colector(ptr, 0, 1);
+	return (1);
 }

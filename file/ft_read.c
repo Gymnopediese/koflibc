@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 09:58:37 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/19 17:25:16 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 23:17:41 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,15 @@ char	*ft_read(char *file_name)
 		return (0);
 	buffer = malloc(1);
 	size = read(fd, tuffer, 3333);
-	while (size)
+	while (size > 0)
 	{
+		tuffer[size] = 0;
 		buffer = ft_strjoin(buffer, tuffer);
+		if (buffer == 0)
+			return (0);
 		size = read(fd, tuffer, 3333);
+		if (size == -1)
+			return (0);
 	}
 	close(fd);
 	return (buffer);

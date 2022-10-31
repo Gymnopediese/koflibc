@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:36:24 by tate              #+#    #+#             */
-/*   Updated: 2022/10/31 11:40:46 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 23:18:11 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[++k])
 		result[i++] = s2[k];
 	result[i++] = '\0';
+	free((void *)s1);
 	return (result);
 }
