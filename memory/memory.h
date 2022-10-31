@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   memory.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:27:39 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/17 17:29:21 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 10:36:09 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	*ft_memccpy(void *restrict dst,
 			const void *restrict src, int c, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
-
+int		ft_f(void *p);
 #endif

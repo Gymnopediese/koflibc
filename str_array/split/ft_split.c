@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "../../sources.h"
 
 int	ft_mega_split(const char *str, int *mots, int flag, char charset)
 {
@@ -40,29 +40,37 @@ int	ft_mega_split(const char *str, int *mots, int flag, char charset)
 	return (worldcount);
 }
 
-char	**ft_strsplit(char const *s, char c)
+int	f(char **fr)
 {
-	int		endstart[3000];
+	int		loop;
+
+	loop = -1;
+	while (fr[++loop])
+		free(fr[loop]);
+	free(fr);
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		endstart[10000];
 	int		wordcount;
 	char	**final;
 	int		loop;
-	int		loop2;
 
 	wordcount = ft_mega_split(s, endstart, 0, c);
 	final = malloc((wordcount + 1) * sizeof (*final));
+	if (final == 0)
+		return (0);
 	loop = 0;
 	while (loop < wordcount * 2)
 	{
 		final[loop / 2] = malloc((endstart[loop + 1]
 					- endstart[loop] + 1) * sizeof (char));
-		loop2 = 0;
-		while (endstart[loop] < endstart[loop + 1])
-		{
-			final[loop / 2][loop2] = s[endstart[loop]];
-			endstart[loop] += 1;
-			loop2++;
-		}
-		final[loop / 2][loop2] = 0;
+		if (final[loop / 2] == 0 && f(final))
+			return (0);
+		ft_strlcpy(final[loop / 2], &s[endstart[loop]],
+			endstart[loop + 1] - endstart[loop] + 1);
 		loop += 2;
 	}
 	final[loop / 2] = 0;

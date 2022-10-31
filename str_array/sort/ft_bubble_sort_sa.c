@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bubble_sort_sa.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 15:52:55 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/19 14:46:02 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 10:29:57 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "../../sources.h"
 
 void	ft_bubble_sort_sa(char **arr)
 {

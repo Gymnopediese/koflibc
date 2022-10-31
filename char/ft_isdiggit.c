@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iatoa.c                                         :+:      :+:    :+:   */
+/*   isdiggit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 17:50:00 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/21 18:51:04 by albaud           ###   ########.fr       */
+/*   Created: 2022/10/10 14:30:52 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/12 11:05:02 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "libft.h"
 
-char	*ft_iatoa(int *arr, int size)
+int	ft_isdigit(int c)
 {
-	char	*res;
-	int		k;
-
-	res = malloc(1);
-	k = -1;
-	while (++k < size)
-	{
-		res = ft_strjoin(res, ft_itoa(arr[k]));
-		if (k < size - 1)
-			res = ft_strjoin(res, " ");
-	}
-	return (res);
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
 }

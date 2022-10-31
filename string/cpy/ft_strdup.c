@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tate <tate@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 10:37:13 by tate              #+#    #+#             */
-/*   Updated: 2022/10/13 11:57:21 by albaud           ###   ########.fr       */
+/*   Updated: 2022/07/02 10:37:50 by tate             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(char *src)
 {
@@ -18,13 +18,15 @@ char	*ft_strdup(char *src)
 	int		len;
 	char	*str;
 
-	len = ft_strlen(src);
+	len = 0;
+	while (src[len])
+		len++;
 	str = (char *)malloc(sizeof(*str) * (len + 1));
-	if (str == 0)
-		return (str);
-	i = -1;
-	while (++i < len)
+	i = 0;
+	while (i < len)
+	{
 		str[i] = src[i];
-	str[i] = 0;
+		i++;
+	}
 	return (str);
 }

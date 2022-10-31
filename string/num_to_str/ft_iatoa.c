@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_iatoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 14:36:24 by tate              #+#    #+#             */
-/*   Updated: 2022/10/12 13:08:09 by albaud           ###   ########.fr       */
+/*   Created: 2022/07/21 17:50:00 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/31 10:38:00 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../sources.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_iatoa(int *arr, int size)
 {
-	char	*result;
-	int		i;
+	char	*res;
 	int		k;
-	int		size;
 
-	size = ft_strlen((char *) s1) + ft_strlen((char *) s2);
-	result = malloc(sizeof(char) * (size + 1));
-	if (result == 0)
-		return (0);
-	i = -1;
-	while (s1[++i])
-		result[i] = s1[i];
+	res = malloc(1);
 	k = -1;
-	while (s2[++k])
-		result[i++] = s2[k];
-	result[i++] = '\0';
-	return (result);
+	while (++k < size)
+	{
+		res = ft_strjoin(res, ft_itoa(arr[k]));
+		if (k < size - 1)
+			res = ft_strjoin(res, " ");
+	}
+	return (res);
 }

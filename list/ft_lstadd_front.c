@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 17:51:40 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/15 17:58:33 by albaud           ###   ########.fr       */
+/*   Created: 2022/10/12 15:59:47 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/12 16:03:18 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	loop;
-
-	loop = -1;
-	if (to_find[0] == '\0')
-		return (str);
-	while (str[++loop] != '\0')
+	if (lst && new)
 	{
-		if (ft_strcmpl(&str[loop], to_find) == 0)
-			return (&str[loop]);
+		new->next = *lst;
+		*lst = new;
 	}
-	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_array.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:40:56 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/21 19:22:07 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 10:24:42 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_bubble_sort_sa(char **arr);
 
 char	**ft_clean_enclosures_sa(char **array, char *charset);
 char	**ft_clean_cs_first(char **array, char *charset, int num);
-char	**ft_strsplit(char const *s, char c);
+char	**ft_split(char const *s, char c);
 char	**ft_strange_split(char const *s, char c, char *join);
 
 #endif

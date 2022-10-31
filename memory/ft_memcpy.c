@@ -3,25 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 15:19:03 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/11 15:46:09 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/13 14:59:20 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char		*restrict	a;
-	const char	*restrict	b;
-	size_t					loop;
+	size_t	i;
 
-	loop = -1;
-	a = dst;
-	b = src;
-	while (++loop < n)
-		a[loop] = b[loop];
+	if (!dst && !src)
+		return (0);
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		i++;
+	}
 	return (dst);
 }

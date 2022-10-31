@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_replacen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 12:27:29 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/15 12:32:57 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 10:27:51 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "../../sources.h"
 
 char	*ft_replacen(char *to_ch, char *to_re, char *re, int ammount)
 {

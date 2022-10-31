@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_str_remove_at.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 14:36:24 by tate              #+#    #+#             */
-/*   Updated: 2022/10/12 13:08:09 by albaud           ###   ########.fr       */
+/*   Created: 2022/07/17 15:56:58 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/31 10:33:09 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_str_remove_at(char *str, int index, int len, int free_)
 {
-	char	*result;
-	int		i;
-	int		k;
-	int		size;
+	char	*res;
 
-	size = ft_strlen((char *) s1) + ft_strlen((char *) s2);
-	result = malloc(sizeof(char) * (size + 1));
-	if (result == 0)
+	res = malloc(sizeof(char) * (ft_strlen(str) + 1 - len));
+	if (!res)
 		return (0);
-	i = -1;
-	while (s1[++i])
-		result[i] = s1[i];
-	k = -1;
-	while (s2[++k])
-		result[i++] = s2[k];
-	result[i++] = '\0';
-	return (result);
+	if (index > 0)
+		res = ft_strncpy(res, str, index);
+	res = ft_strcat(res, &str[index + len]);
+	if (free_)
+		free(str);
+	return (res);
 }

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strange_split.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 04:41:33 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/17 23:39:17 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 10:28:56 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
-
+#include "../../sources.h"
 
 void	ft_findword(int *flag, int i, int **mots)
 {

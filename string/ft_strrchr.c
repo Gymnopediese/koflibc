@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strafterstr.c                                   :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 17:51:40 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/15 23:44:28 by albaud           ###   ########.fr       */
+/*   Created: 2022/10/10 16:47:35 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/12 15:16:49 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "libft.h"
 
-char	*ft_strafterstr(char *str, char *to_find)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	loop;
+	int	len;
 
-	loop = -1;
-	if (to_find[0] == '\0')
-		return (str);
-	while (str[++loop] != '\0')
+	len = 0;
+	while (s[len])
+		++len;
+	while (len >= 0)
 	{
-		if (ft_strcmpl(&str[loop], to_find) == 0)
-			return (&str[loop + ft_strlen(to_find)]);
+		if ((unsigned char)s[len] == (unsigned char)c)
+			return ((char *) &s[len]);
+		len--;
 	}
 	return (0);
 }
