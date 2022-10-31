@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 10:37:13 by tate              #+#    #+#             */
-/*   Updated: 2022/10/13 11:57:21 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:40:42 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 char	*ft_strdup(char *src)
 {

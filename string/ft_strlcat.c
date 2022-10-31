@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:39:39 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 15:28:05 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:40:48 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

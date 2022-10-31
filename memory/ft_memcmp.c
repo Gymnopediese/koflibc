@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 17:17:57 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 13:48:22 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:37:25 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

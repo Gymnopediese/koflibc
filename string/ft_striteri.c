@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:11:05 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 14:11:28 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:40:44 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "../sources.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

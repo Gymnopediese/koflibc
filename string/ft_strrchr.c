@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:47:35 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 15:16:49 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:41:01 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

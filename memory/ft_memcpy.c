@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 15:19:03 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/13 14:59:20 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:37:28 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

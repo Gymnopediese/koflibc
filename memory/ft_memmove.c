@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:58:19 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 12:40:27 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:37:31 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

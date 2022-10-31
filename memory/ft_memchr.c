@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:47:35 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 15:25:47 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:37:23 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

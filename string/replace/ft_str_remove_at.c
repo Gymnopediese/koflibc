@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_remove_at.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 15:56:58 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 10:33:09 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:44:19 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "../../sources.h"
 
 char	*ft_str_remove_at(char *str, int index, int len, int free_)
 {

@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:50:32 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/20 20:42:43 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:34:30 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	*ft_atoia(char *str, char split, double *size)
 	int		*res;
 	int		k;
 
-	buffer = ft_strsplit(str, split);
+	buffer = ft_split(str, split);
 	res = malloc(ft_strtablen(buffer) * sizeof(int));
 	k = -1;
 	while (buffer[++k])

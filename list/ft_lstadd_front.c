@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 15:59:47 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 16:03:18 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:34:45 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

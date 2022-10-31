@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 15:01:07 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 15:46:12 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:39:10 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 void	ft_bzero(void *s, size_t n)
 {

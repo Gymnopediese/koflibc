@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 16:55:13 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 17:11:45 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:35:51 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_lst = 0;
 	while (lst)
 	{
-		new_elem = ft_lstnew(f(lst->content));
+		new_elem = ft_lstnew(f(lst->data));
 		if (!new_elem)
 		{
 			ft_lstclear(&new_lst, del);

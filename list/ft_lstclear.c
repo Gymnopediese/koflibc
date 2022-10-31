@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 16:55:13 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/12 16:47:11 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:35:19 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../sources.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (current)
 	{	
 		next = current->next;
-		del(current->content);
+		del(current->data);
 		free(current);
 		current = next;
 	}

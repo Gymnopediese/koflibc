@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:25:49 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/21 17:40:10 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 11:36:59 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 
 int		ft_size(t_list *begin_list);
 void	ft_free_node(t_list *node, int pointers);
-
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_indexof_list(t_list *list_ptr, void *data_ref, int (*cmp)());
-
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 t_list	*ft_create_elem(void *data);
 
 t_list	*ft_get_by_key(t_list *begin_list, char *key);
