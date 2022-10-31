@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoim.c                                         :+:      :+:    :+:   */
+/*   ft_garbage_colector.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 15:49:36 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 19:48:20 by albaud           ###   ########.fr       */
+/*   Created: 2022/10/31 19:23:05 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/31 19:35:06 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../sources.h"
 
-t_matrix	ft_atoim(char **str, char split)
-{
-	t_matrix	res;
-	int			k;
 
-	res.map = allok(ft_strtablen(str), sizeof(int *), EXITONNULL);
-	if (res.map == 0)
-		return (res);
-	k = -1;
-	while (str[++k])
-		res.map[k] = ft_atoia(str[k], split, &res.size.x);
-	res.size.y = k;
-	return (res);
+void	ft_garbage_colector(void *ptr, int mode, int _exit)
+{
+	static t_list	*garbage;
+	t_list			*elem;
+
+	if (mode == 0)
+	{
+		elem = ft_lstnew(ptr);
+		if (elem == 0)
+			return ;
+		ft_lstadd_back(&garbage, elem);
+	}
+	else
+	{
+		ft_lstclear(&garbage, free);
+		if (_exit)
+			exit(0);
+	}
 }

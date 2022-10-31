@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:50:32 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 11:34:30 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 19:48:00 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int	*ft_atoia(char *str, char split, double *size)
 	int		k;
 
 	buffer = ft_split(str, split);
-	res = malloc(ft_strtablen(buffer) * sizeof(int));
+	res = allok(ft_strtablen(buffer), sizeof(int), EXITONNULL);
+	if (res == 0)
+		return (0);
 	k = -1;
 	while (buffer[++k])
 		res[k] = ft_atoli(buffer[k]);

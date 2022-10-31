@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 03:08:24 by albaud            #+#    #+#             */
-/*   Updated: 2022/08/02 17:29:54 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 19:46:41 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # define LIGHT_BLUE 0x00FFFF
 # define WHITE 		0xFFFFFF
 # define BLACK 		0
+
+# define EXITONNULL 1
 
 enum e_keycode
 {

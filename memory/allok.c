@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoim.c                                         :+:      :+:    :+:   */
+/*   allok.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 15:49:36 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 19:48:20 by albaud           ###   ########.fr       */
+/*   Created: 2022/10/31 19:42:36 by albaud            #+#    #+#             */
+/*   Updated: 2022/10/31 19:49:33 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../sources.h"
 
-t_matrix	ft_atoim(char **str, char split)
+void	*allok(int num, int size, int exit_on_null)
 {
-	t_matrix	res;
-	int			k;
+	void	*res;
 
-	res.map = allok(ft_strtablen(str), sizeof(int *), EXITONNULL);
-	if (res.map == 0)
-		return (res);
-	k = -1;
-	while (str[++k])
-		res.map[k] = ft_atoia(str[k], split, &res.size.x);
-	res.size.y = k;
+	res = ft_calloc(num, size);
+	if (res == 0 && exit_on_null)
+		ft_garbage_colector(res, 1, 1);
+	else
+		ft_garbage_colector(res, 0, 0);
 	return (res);
 }
