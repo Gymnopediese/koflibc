@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:42:36 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 19:49:33 by albaud           ###   ########.fr       */
+/*   Updated: 2022/10/31 19:50:20 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*allok(int num, int size, int exit_on_null)
 	res = ft_calloc(num, size);
 	if (res == 0 && exit_on_null)
 		ft_garbage_colector(res, 1, 1);
-	else
+	else if (res != 0)
 		ft_garbage_colector(res, 0, 0);
 	return (res);
 }
