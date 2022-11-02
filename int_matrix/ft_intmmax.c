@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   int_matrix.h                                       :+:      :+:    :+:   */
+/*   ft_intmmax.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 15:49:02 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/02 19:36:22 by albaud           ###   ########.fr       */
+/*   Created: 2022/11/02 19:33:04 by albaud            #+#    #+#             */
+/*   Updated: 2022/11/02 19:36:16 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INT_MATRIX_H
-# define INT_MATRIX_H
+#include "../sources.h"
 
-int			ft_intmmax(t_matrix map);
-t_matrix	ft_atoim(char **str, char split);
-t_matrix	ft_init_intm(int x, int y, int val);
-void		ft_reset_intm(t_matrix map, int val);
-#endif
+int	ft_intmmax(t_matrix map)
+{
+	int	i;
+	int	j;
+	int	max;
+
+	max = -2147483648;
+	i = -1;
+	while (++i < map.size.x)
+	{
+		j = -1;
+		while (++j < map.size.y)
+		{
+			if (map.map[j][i] > max)
+				max = map.map[j][i];
+		}
+	}
+	return (max);
+}
