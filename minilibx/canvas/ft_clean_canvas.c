@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_innit_canvas.c                                  :+:      :+:    :+:   */
+/*   ft_clean_canvas.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 00:54:43 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/20 21:16:42 by albaud           ###   ########.fr       */
+/*   Created: 2022/07/24 11:08:57 by albaud            #+#    #+#             */
+/*   Updated: 2022/11/02 20:24:10 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "../../sources.h"
 
-t_canvas	ft_init_canvas(void *mlx, int x, int y)
+void	ft_clean_canvas(t_canvas cvs)
 {
-	t_canvas	cvs;
+	int	i;
+	int	j;
 
-	cvs.x = x;
-	cvs.y = y;
-	cvs.img = mlx_new_image(mlx, x, y);
-	cvs.cvs = mlx_get_data_addr(cvs.img,
-			&cvs.pixel_bits, &cvs.line_bytes, &cvs.endian);
-	return (cvs);
+	i = -1;
+	while (++i < cvs.x)
+	{
+		j = -1;
+		while (++j < cvs.y)
+			ft_put_pixel(&cvs, i, j, 0);
+	}
 }

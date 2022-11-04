@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 03:08:24 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 21:12:54 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/02 22:05:16 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MACRO_H
 
 # define PI 		3.14159265359
+
 # define RED 		0xFF0000
 # define GREEN 		0x00FF00
 # define BLUE 		0x0000FF
@@ -58,6 +59,11 @@ enum e_keycode
 
 	KEYCODE_8 = 28,
 	KEYCODE_0 = 29,
+
+	KEYCODE_O = 31,
+	KEYCODE_I = 34,
+	KEYCODE_L = 37,
+	KEYCODE_K = 40,
 	KEYCODE_TAB = 49,
 	KEYCODE_SPACE = 49,
 
@@ -67,6 +73,7 @@ enum e_keycode
 	KEYCODE_UP_ARROW = 126,
 	KEYCODE_LSHIFT = 257,
 	KEYCODE_RSHIFT = 258,
+	
 };
 
 #endif

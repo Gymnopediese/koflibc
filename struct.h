@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:33:27 by tate              #+#    #+#             */
-/*   Updated: 2022/10/01 16:42:27 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/02 20:28:36 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,12 @@ typedef struct s_window
 	void		*mlx;
 	t_canvas	cvs;
 }	t_window;
+
+typedef struct s_line
+{
+	t_vector	a;
+	t_vector	b;
+}	t_line;
 
 // typedef struct s_game
 // {

@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read.c                                          :+:      :+:    :+:   */
+/*   ft_innit_canvas.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 09:58:37 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/02 23:22:04 by albaud           ###   ########.fr       */
+/*   Created: 2022/07/20 00:54:43 by albaud            #+#    #+#             */
+/*   Updated: 2022/11/02 20:24:30 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
+#include "../../sources.h"
 
-char	*ft_read(char *file_name)
+t_canvas	ft_init_canvas(void *mlx, int x, int y)
 {
-	int		size;
-	char	*buffer;
-	int		fd;
-	char	tuffer[3334];
+	t_canvas	cvs;
 
-	fd = open(file_name, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	buffer = malloc(1);
-	size = read(fd, tuffer, 3333);
-	while (size > 0)
-	{
-		tuffer[size] = 0;
-		buffer = ft_strjoin(buffer, tuffer);
-		if (buffer == 0)
-			return (0);
-		size = read(fd, tuffer, 3333);
-	}
-	close(fd);
-	return (buffer);
+	cvs.x = x;
+	cvs.y = y;
+	cvs.img = mlx_new_image(mlx, x, y);
+	cvs.cvs = mlx_get_data_addr(cvs.img,
+			&cvs.pixel_bits, &cvs.line_bytes, &cvs.endian);
+	return (cvs);
 }

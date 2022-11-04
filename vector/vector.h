@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:54:38 by albaud            #+#    #+#             */
-/*   Updated: 2022/08/11 18:25:43 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/02 21:02:17 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ t_vector	*ft_mal_vector(double x, double y, double z);
 t_vector	*ft_dup_vector(t_vector toclone);
 double		ft_distance(t_vector a, t_vector b);
 double		ft_vectind(t_vector vect, int ind);
-
+t_line		ft_line(t_vector a, t_vector b);
 #endif
