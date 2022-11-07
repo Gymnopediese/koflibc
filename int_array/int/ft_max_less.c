@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_fd.c                                       :+:      :+:    :+:   */
+/*   ft_max_less                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 16:32:38 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/07 11:41:10 by albaud           ###   ########.fr       */
+/*   Created: 2022/07/13 21:47:17 by albaud            #+#    #+#             */
+/*   Updated: 2022/11/06 18:07:04 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
-
-char	*ft_read_fd(int fd)
+int	ft_max_less(int *arr, int size, int less)
 {
-	int		size;
-	char	*buffer;
-	char	tuffer[3333 + 1];
+	int	max;
 
-	buffer = malloc(1);
-	size = read(fd, tuffer, 3333);
-	while (size)
+	max = -2147483648;
+	while (--size >= 0)
 	{
-		tuffer[size] = 0;
-		buffer = ft_strjoin(buffer, tuffer);
-		size = read(fd, tuffer, 3333);
+		if (arr[size] > max && arr[size] < less)
+			max = arr[size];
 	}
-	return (buffer);
+	return (max);
 }

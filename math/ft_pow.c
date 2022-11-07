@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_fd.c                                       :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 16:32:38 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/07 11:41:10 by albaud           ###   ########.fr       */
+/*   Created: 2022/11/06 18:39:16 by albaud            #+#    #+#             */
+/*   Updated: 2022/11/06 18:39:32 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sources.h"
-
-char	*ft_read_fd(int fd)
+long	ft_pow(long nbr, int base)
 {
-	int		size;
-	char	*buffer;
-	char	tuffer[3333 + 1];
+	long	rtn;
 
-	buffer = malloc(1);
-	size = read(fd, tuffer, 3333);
-	while (size)
+	rtn = 1;
+	while (base > 0)
 	{
-		tuffer[size] = 0;
-		buffer = ft_strjoin(buffer, tuffer);
-		size = read(fd, tuffer, 3333);
+		rtn *= nbr;
+		base--;
 	}
-	return (buffer);
+	return (rtn);
 }

@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 16:50:12 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/02 23:17:26 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/07 11:42:30 by albaud           ###   ########.fr       */
 /*                                                                            */
 /*   Name: ft_read_lignes_fd - read text from an open fd line by line         */
 /*                                                                            */
