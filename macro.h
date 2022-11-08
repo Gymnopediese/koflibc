@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 03:08:24 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/02 22:05:16 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/08 12:52:37 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define MACRO_H
 
 # define PI 		3.14159265359
-
+# define SPLITLEN	100000
+# define MININT		-2147483648
+# define MAXINT		2147483647
 # define RED 		0xFF0000
 # define GREEN 		0x00FF00
 # define BLUE 		0x0000FF

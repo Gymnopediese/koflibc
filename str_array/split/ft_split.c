@@ -53,7 +53,7 @@ int	f(char **fr)
 
 char	**ft_split(char const *s, char c)
 {
-	int		endstart[10000];
+	int		endstart[SPLITLEN];
 	int		wordcount;
 	char	**final;
 	int		loop;

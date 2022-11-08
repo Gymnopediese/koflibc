@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:33:27 by tate              #+#    #+#             */
-/*   Updated: 2022/11/02 20:28:36 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/07 17:27:36 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ typedef struct s_list
 	struct s_list	*next;
 	void			*data;
 }	t_list;
+
+typedef struct s_inta
+{
+	int	*arr;
+	int	size;
+}	t_inta;
 
 typedef struct s_strpp
 {
