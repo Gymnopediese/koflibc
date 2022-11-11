@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:23:05 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/07 12:02:48 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/08 22:18:56 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_garbage_colector(void *ptr, int mode, int _exit)
 
 	if (mode == 0)
 	{
+		if (ptr == 0 && _exit)
+			ft_garbage_colector(0, 1, _exit);
 		elem = ft_lstnew(ptr);
 		if (elem == 0 && _exit)
 			ft_garbage_colector(0, 1, _exit);

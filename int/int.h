@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 16:56:01 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/21 19:30:59 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/08 18:22:50 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int			ft_atoi(const char *str);
 int			ft_atoi(const char *str);
 int			ft_intlen(long nb);
 int			ft_nlen(long nb, int n);
+double		ft_atodo(const char *str);
 
 #endif 
