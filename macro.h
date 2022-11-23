@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 03:08:24 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/08 12:52:37 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:55:00 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,34 +48,28 @@ enum e_keycode
 	KEYCODE_R = 15,
 	KEYCODE_Z = 18,
 	KEYCODE_T = 17,
-
 	KEYCODE_1 = 18,
 	KEYCODE_2 = 19,
 	KEYCODE_3 = 20,
 	KEYCODE_4 = 21,
 	KEYCODE_6 = 22,
 	KEYCODE_5 = 23,
-
 	KEYCODE_9 = 25,
 	KEYCODE_7 = 26,
-
 	KEYCODE_8 = 28,
 	KEYCODE_0 = 29,
-
 	KEYCODE_O = 31,
 	KEYCODE_I = 34,
 	KEYCODE_L = 37,
 	KEYCODE_K = 40,
 	KEYCODE_TAB = 49,
 	KEYCODE_SPACE = 49,
-
 	KEYCODE_LEFT_ARROW = 123,
 	KEYCODE_RIGHT_ARROW = 124,
 	KEYCODE_DOWN_ARROW = 125,
 	KEYCODE_UP_ARROW = 126,
 	KEYCODE_LSHIFT = 257,
 	KEYCODE_RSHIFT = 258,
-	
 };
 
 #endif

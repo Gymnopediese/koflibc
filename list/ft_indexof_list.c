@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 16:59:09 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/18 17:03:49 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:56:25 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ int	ft_indexof_list(t_list *list_ptr, void *data_ref, int (*cmp)())
 	}
 	return (-1);
 }
-

@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 01:40:39 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/22 12:39:43 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:49:32 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ t_canvas	ft_rotate_h(void *mlx, t_canvas cvs, int angle)
 	double		ind;
 	int			i;
 
-	res = ft_init_canvas(mlx, (int)fabs((cvs.x * cos(ft_deg_to_rad(angle)))), cvs.y);
+	res = ft_init_canvas(mlx,
+			(int)fabs((cvs.x * cos(ft_deg_to_rad(angle)))), cvs.y);
 	ind = 0;
 	i = -1;
 	while (++i < res.x)

@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 15:44:40 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/22 12:18:36 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:57:27 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int	ft_get_valid_neighboor(t_matrix map, t_vector *n)
 	while (ft_size(range) > 0)
 	{
 		ran = ft_randint(0, ft_size(range));
-
 		ind = *(int *)ft_get(range, ran)->data;
 		if (ft_try_dig(map, n, ind))
 		{
@@ -103,4 +102,3 @@ char	**ft_maze(int x, int y)
 	ft_putendl("4");
 	return (ft_imtoa(map));
 }
-

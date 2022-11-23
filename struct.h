@@ -6,13 +6,12 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 14:33:27 by tate              #+#    #+#             */
-/*   Updated: 2022/11/07 17:27:36 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:55:38 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCT_H
 # define STRUCT_H
-
 
 typedef struct s_list
 {
@@ -95,12 +94,5 @@ typedef struct s_line
 	t_vector	a;
 	t_vector	b;
 }	t_line;
-
-// typedef struct s_game
-// {
-// 	t_player	player;
-// 	t_window	w;
-// 	t_map		map;
-// }	t_game;
 
 #endif

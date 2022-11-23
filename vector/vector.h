@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:54:38 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/02 21:02:17 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:49:38 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int			ft_vector_eql(t_vector a, t_vector b);
 
 t_vector	ft_add_to_vector(t_vector vect, double x, double y, double z);
 t_vector	ft_add_vector(t_vector vect, t_vector toadd);
-
 
 t_vector	ft_vec2(double x, double y);
 t_vector	ft_vect(double x, double y, double z);

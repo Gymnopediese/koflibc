@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 01:48:59 by albaud            #+#    #+#             */
-/*   Updated: 2022/07/15 02:21:21 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:50:46 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ char	*ft_join(char **arr, char *glue)
 	}
 	return (res);
 }
-

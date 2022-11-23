@@ -6,7 +6,7 @@
 /*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:30:13 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/02 20:36:56 by albaud           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:48:45 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ int			ft_touches_wall(t_matrix map, t_vector pos, int size);
 void		ft_putimg(t_window w, void *img, t_vector pos);
 void		ft_clean_canvas(t_canvas cvs);
 void		ft_fill_canvas(t_canvas cvs, int color);
-void		ft_draw_gline(t_canvas *cvs, t_line l, int	*colors, t_vector color);
+void		ft_draw_gline(t_canvas *cvs, t_line l,
+				int	*colors, t_vector color);
 #endif
