@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoia.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:50:32 by albaud            #+#    #+#             */
-/*   Updated: 2022/10/31 22:50:21 by albaud           ###   ########.fr       */
+/*   Updated: 2023/02/14 00:33:59 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	*ft_atoia(char *str, char split, double *size)
 	k = -1;
 	while (buffer[++k])
 		res[k] = ft_atoli(buffer[k]);
-	*size = k;
+	if (size)
+		*size = k;
 	ft_free_pp((void *)buffer);
 	return (res);
 }

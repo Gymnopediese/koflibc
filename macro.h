@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   macro.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 03:08:24 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/23 14:55:00 by albaud           ###   ########.fr       */
+/*   Updated: 2023/02/14 00:08:21 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define MACRO_H
 
 # define PI 		3.14159265359
-# define SPLITLEN	100000
+# define SPLITLEN	1000000
 # define MININT		-2147483648
 # define MAXINT		2147483647
 # define RED 		0xFF0000

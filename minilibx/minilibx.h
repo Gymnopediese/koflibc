@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minilibx.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albaud <albaud@student.42lausanne.ch>      +#+  +:+       +#+        */
+/*   By: albaud <albaud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 17:30:13 by albaud            #+#    #+#             */
-/*   Updated: 2022/11/23 14:48:45 by albaud           ###   ########.fr       */
+/*   Updated: 2023/02/26 13:44:47 by albaud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void		ft_clone_pixel(t_canvas *cvs, int x, int y, char *pixel);
 t_canvas	ft_rotate_h(void *mlx, t_canvas cvs, int angle);
 t_canvas	ft_rotate_right(void *mlx, t_canvas cvs, int angle);
 t_canvas	ft_init_filled_canvas(void *mlx, int x, int y, int color);
+t_canvas	ft_init_circle_canvas(void *mlx, int r, int color);
 void		ft_draw_canvas(t_canvas *dest, t_canvas *src, int x, int y);
 void		ft_copy_shrinked_col(t_canvas dest, t_canvas src, t_vector inds,
 				t_vector std);
@@ -34,6 +35,7 @@ void		ft_init_player(t_player *plr, t_vector size, t_vector pos,
 long int	ft_get_pixel_color(void *mlx, t_canvas *cvs, int x, int y);
 long int	ft_has_pixel(t_canvas *cvs, int x, int y);
 t_canvas	ft_init_canvas(void *mlx, int x, int y);
+t_canvas	ft_draw_circle(t_canvas *c, int r, int color);
 t_canvas	ft_init_image(void *mlx, char *filename);
 int			ft_touches(t_canvas *tchr, t_canvas *target, int x, int y);
 int			ft_rgb(int r, int g, int b);
